@@ -13,5 +13,6 @@ class UDPSend:
     def send(self, data):
         try:
             self.sock.sendto(data, (self.ip, self.port))
+            # print(f"[UDPSend] send {data}")
         except Exception as e:
             print("[UDPSend] UDP send error")
